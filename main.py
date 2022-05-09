@@ -33,7 +33,8 @@ st.markdown(
 # Otherwise, every time it runs, the dataset will be read again
 @st.cache
 def get_data():
-    df = pd.read_csv("/Users/scarlett/Documents/AlphaROC/DP4/DP4_Sample_May5/Data/sample.csv")
+    # df = pd.read_csv("/Users/scarlett/Documents/AlphaROC/DP4/DP4_Sample_May5/Data/sample.csv")
+    df = pd.read_csv("https://github.com/scarlettttelracs/sample_data_may5/blob/master/Data/sample.csv")
     return df
 
 
