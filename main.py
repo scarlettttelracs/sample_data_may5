@@ -32,8 +32,8 @@ st.markdown(
 # Trying to let the web read the dataset only once using cache
 # Otherwise, every time it runs, the dataset will be read again
 @st.cache
-def get_data(filename):
-    df = pd.read_csv(filename)
+def get_data():
+    df = pd.read_csv("/Users/scarlett/Documents/AlphaROC/DP4/DP4_Sample_May5/Data/sample.csv")
     return df
 
 
@@ -45,7 +45,7 @@ with header:
 # Dataset section, do some modifications about the names and the format to make it presented better.
 with dataset:
     st.header("This is the sample dataset")
-    sample_data = get_data("/Users/scarlett/Documents/AlphaROC/DP4/DP4_Sample_May5/Data/sample.csv")
+    sample_data = get_data()
     col_names = list(sample_data.columns)
     new_col_names = col_names[1:]
     new_col_names[4] = "obs_sales"
